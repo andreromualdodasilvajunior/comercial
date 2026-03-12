@@ -24,3 +24,8 @@ $senha = $_POST["senha"];
 
   $mensagem = "Bem-vindo, $usuario! Você realizou acesso às $hora no dia $data.";
         }
+
+ 
+        else if ($usuario != "PROFESSOR" && $usuario != "COORDENADOR" && $senha != "DEVISATE") {
+            $mensagem = "Erro: nome de usuário e senha inválidos.";
+        }
