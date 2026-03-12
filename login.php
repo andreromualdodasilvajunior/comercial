@@ -14,9 +14,12 @@ $senha = $_POST["senha"];
     }
  
     else {
+
              if (($usuario == "PROFESSOR" || $usuario == "COORDENADOR") && $senha == "DEVISATE") {
  
             date_default_timezone_set("America/Sao_Paulo");
  
             $hora = date("H:i");
             $data = date("d/m/Y");
+
+            $mensagem = "Bem-vindo,
