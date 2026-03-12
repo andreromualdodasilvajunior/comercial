@@ -22,4 +22,4 @@ $senha = $_POST["senha"];
             $hora = date("H:i");
             $data = date("d/m/Y");
 
-            $mensagem = "Bem-vindo,
+           $mensagem = "Bem-vindo, $usuario! Você
