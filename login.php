@@ -57,3 +57,23 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     </style>
 </head>
 <body>
+ <h2>Sistema de Login</h2>
+
+    <?php if ($mensagem !== ''): ?>
+        <div class="mensagem <?= strpos($mensagem, 'Bem-vindo') === 0 ? 'sucesso' : 'erro' ?>">
+            <?= htmlspecialchars($mensagem) ?>
+        </div>
+    <?php endif; ?>
+
+    <form method="POST">
+        Usuário:<br>
+        <input type="text" name="usuario" required><br><br>
+
+        Senha:<br>
+        <input type="password" name="senha" required><br><br>
+
+        <input type="submit" value="Entrar">
+    </form>
+
+</body>
+</html>
