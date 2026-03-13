@@ -45,3 +45,11 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+      <style>
+         body { font-family: Arial, sans-serif; margin: 40px; text-align: center; }
+        h2 { color: #333; }
+        form { max-width: 400px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input[type="text"], input[type="password"] { width: 100%; padding: 10px; margin: 10px 0; box-sizing: border-box; }
+        input[type="submit"] { background: #4CAF50; color: white; padding: 12px; border: none; width: 100%; cursor: pointer; }
+        .mensagem { margin: 20px 0; padding: 15px; border-radius: 5px; font-weight: bold; }
+        .sucesso { background: #e8f5e9; color: #2e7d32; }
