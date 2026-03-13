@@ -29,3 +29,13 @@ $senha = $_POST["senha"];
         else if ($usuario != "PROFESSOR" && $usuario != "COORDENADOR" && $senha != "DEVISATE") {
             $mensagem = "Erro: nome de usuário e senha inválidos.";
         }
+           else if ($usuario != "PROFESSOR" && $usuario != "COORDENADOR") {
+            $mensagem = "Erro: nome de usuário inválido.";
+        }
+ 
+        else {
+            $mensagem = "Erro: senha incorreta.";
+        }
+ 
+    }
+}
