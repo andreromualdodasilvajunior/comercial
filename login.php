@@ -29,4 +29,4 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
             if ($usuario_valido && $senha_valida) {
             $hora = date('H:i');
             $data = date('d/m/Y');
-     
+      $mensagem = "Bem-vindo, $usuario! Você realizou acesso às $hora no dia $data.";
