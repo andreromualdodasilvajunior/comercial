@@ -25,3 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
       
         $usuario_valido = ($usuario === 'PROFESSOR' || $usuario === 'COORDENADOR');
         $senha_valida   = ($senha === 'DEVISATE');
+  if ($usuario_valido && $senha_valida) {
+            if ($usuario_valido && $senha_valida) {
+            $hora = date('H:i');
+            $data = date('d/m/Y');
+     
