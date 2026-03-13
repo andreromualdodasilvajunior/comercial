@@ -53,3 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
         input[type="submit"] { background: #4CAF50; color: white; padding: 12px; border: none; width: 100%; cursor: pointer; }
         .mensagem { margin: 20px 0; padding: 15px; border-radius: 5px; font-weight: bold; }
         .sucesso { background: #e8f5e9; color: #2e7d32; }
+          .erro    { background: #ffebee; color: #c62828; }
+    </style>
+</head>
+<body>
