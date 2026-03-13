@@ -31,4 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
             $data = date('d/m/Y');
       $mensagem = "Bem-vindo, $usuario! Você realizou acesso às $hora no dia $data.";
             } elseif (!$usuario_valido && !$senha_valida) {
-                $mensagem +
+                $mensagem = 'Erro: nome do usuario e senha incorreto.';
+        } elseif (!$usuario_valido) {
+            $mensagem = 'Erro: nome de usuário incorreto.';
+        } else {
+            $mensagem = 'Erro: senha incorreta.';
+        }
+    }
+}
