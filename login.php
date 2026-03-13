@@ -1,107 +1,74 @@
 <?php
 $mensagem = "";
- 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
- 
-    $usuario = $_POST["usuario"];
-    $senha = $_POST["senha"];
 
-    if (strlen($usuario) < 4 || strlen($usuario) > 15) {
-            $mensagem = "Erro: o nome de usuário deve ter entre 4 e 15 caracteres.";
-        }
-    else if (strlen($senha) < 4 || strlen($senha) > 15) {
-            $mensagem = "Erro: a senha deve ter entre 4 e 15 caracteres.";
-        }
-    
-        else {
+$usuario = $_POST["usuario"];
+$senha = $_POST["senha"];
 
-                if (($usuario == "PROFESSOR" || $usuario == "COORDENADOR") && $senha == "DEVISATE") {
-    
-                date_default_timezone_set("America/Sao_Paulo");
-    
-                $hora = date("H:i");
-                $data = date("d/m/Y");
+if (strlen($usuario) < 4 || strlen($usuario) > 15) {
+$mensagem = "Erro: o nome de usuário deve ter entre 4 e 15 caracteres.";
+}
 
-    $mensagem = "Bem-vindo, $usuario! Você realizou acesso às $hora no dia $data.";
-            }
+elseif (strlen($senha) < 4 || strlen($senha) > 15) {
+$mensagem = "Erro: a senha deve ter entre 4 e 15 caracteres.";
+}
 
-    
-            else if ($usuario != "PROFESSOR" && $usuario != "COORDENADOR" && $senha != "DEVISATE") {
-                $mensagem = "Erro: nome de usuário e senha inválidos.";
-            }
-            else if ($usuario != "PROFESSOR" && $usuario != "COORDENADOR") {
-                $mensagem = "Erro: nome de usuário inválido.";
-            }
-    
-            else {
-                $mensagem = "Erro: senha incorreta.";
-            }
-    
-        }
-    }
+else {
 
-    ?>
+if (($usuario == "PROFESSOR" || $usuario == "COORDENADOR") && $senha == "DEVISATE") {
 
+date_default_timezone_set("America/Sao_Paulo");
 
+$hora = date("H:i");
+$data = date("d/m/Y");
 
-    <!DOCTYPE html>
+$mensagem = "Bem-vindo, $usuario! Você realizou acesso às $hora no dia $data.";
+}
 
-    <html>
+elseif ($usuario != "PROFESSOR" && $usuario != "COORDENADOR" && $senha != "DEVISATE") {
+$mensagem = "Erro: nome de usuário e senha inválidos.";
+}
 
-    <head>
+elseif ($usuario != "PROFESSOR" && $usuario != "COORDENADOR") {
+$mensagem = "Erro: nome de usuário inválido.";
+}
 
-    <meta charset="UTF-8">
+else {
+$mensagem = "Erro: senha incorreta.";
+}
 
-    <title>Login</title>
+}
+}
+?>
 
-    </head>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body>
 
-    <body>
+<h2>Sistema de Login</h2>
 
+<form method="POST">
 
+Usuário:<br>
+<input type="text" name="usuario"><br><br>
 
-    <h2>Sistema de Login</h2>
+Senha:<br>
+<input type="password" name="senha"><br><br>
 
+<input type="submit" value="Entrar">
 
+</form>
 
-    <form method="POST">
+<br>
 
+<?php
+echo $mensagem;
+?>
 
-
-    Usuário:<br>
-
-    <input type="text" name="usuario"><br><br>
-
-
-
-    Senha:<br>
-
-    <input type="password" name="senha"><br><br>
-
-
-
-    <input type="submit" value="Entrar">
-
-
-
-    </form>
-
-
-
-    <br>
-
-
-
-    <?php
-
-    echo $mensagem;
-
-    ?>
-
-
-
-    </body>
-
-    </html>
-
-    
+</body>
+</html>
