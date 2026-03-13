@@ -18,3 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     if (strlen($senha) < 4 || strlen($senha) > 15) {
         $erros[] = 'Erro: a senha deve ter entre 4 e 15 caracteres.';
     }
+
+        if (!empty($erros)) {
+        $mensagem = implode('<br>', $erros);
+    } else {
+      
+        $usuario_valido = ($usuario === 'PROFESSOR' || $usuario === 'COORDENADOR');
+        $senha_valida   = ($senha === 'DEVISATE');
