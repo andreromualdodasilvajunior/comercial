@@ -30,3 +30,5 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
             $hora = date('H:i');
             $data = date('d/m/Y');
       $mensagem = "Bem-vindo, $usuario! Você realizou acesso às $hora no dia $data.";
+            } elseif (!$usuario_valido && !$senha_valida) {
+                $mensagem +
