@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     <meta charset="UTF-8">
     <title>Login</title>
       <style>
-         body { font-family: Arial, sans-serif; margin: 40px; text-align: center; }
+        body { font-family: Arial, sans-serif; margin: 40px; text-align: center; }
         h2 { color: #333; }
         form { max-width: 400px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
         input[type="text"], input[type="password"] { width: 100%; padding: 10px; margin: 10px 0; box-sizing: border-box; }
